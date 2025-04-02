@@ -1,11 +1,30 @@
 
 import { Mail, CheckCircle } from "lucide-react";
 import { useState } from "react";
+import Testimonial from "./Testimonial";
 
 const Newsletter = () => {
   const [email, setEmail] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  
+  const testimonials = [
+    {
+      quote: "I've been following Hemant's content for 6 months and it has completely transformed how I approach my role as a senior developer.",
+      author: "Tech Lead",
+      role: "at Startup"
+    },
+    {
+      quote: "The weekly newsletter is packed with practical advice I can immediately apply to my work. Invaluable resource!",
+      author: "Product Engineer",
+      role: "at Scale-up"
+    },
+    {
+      quote: "From junior to senior in two years following the roadmap shared in this newsletter. Can't recommend it enough.",
+      author: "Senior Engineer",
+      role: "at HealthTech Company"
+    }
+  ];
   
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -51,12 +70,8 @@ const Newsletter = () => {
                 ))}
               </ul>
               
-              <div className="mt-6 bg-white p-4 rounded-lg border border-gray-200">
-                <p className="text-sm text-muted-foreground">
-                  "I've been following Hemant's content for 6 months and it has completely
-                  transformed how I approach my role as a senior developer."
-                </p>
-                <p className="font-medium mt-2 text-sm">— Tech Lead at Startup</p>
+              <div className="mt-6">
+                <Testimonial testimonials={testimonials} />
               </div>
             </div>
             

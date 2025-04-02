@@ -22,8 +22,15 @@ const Navbar = () => {
     }`}>
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex justify-between items-center">
-          <div className="font-heading font-bold text-2xl text-brand-dark">
-            The Hustling Engineer
+          <div className="flex items-center">
+            <img 
+              src="/lovable-uploads/f60fa699-511b-4f4f-9bbe-344397f2a3cf.png" 
+              alt="The Hustling Engineer Logo" 
+              className="h-10 w-10 mr-3"
+            />
+            <span className="font-heading font-bold text-2xl text-brand-dark">
+              The Hustling Engineer
+            </span>
           </div>
           
           {/* Desktop Navigation */}
