@@ -1,6 +1,7 @@
 
 import { useState, useEffect } from "react";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
+import { MessageSquare } from "lucide-react";
 
 interface TestimonialProps {
   testimonials: {
@@ -32,20 +33,25 @@ const Testimonial = ({ testimonials, intervalTime = 5000 }: TestimonialProps) =>
   if (!testimonials.length) return null;
 
   return (
-    <div className="relative bg-muted rounded-lg p-5 max-w-md mx-auto">
+    <div className="relative bg-muted rounded-lg p-5 max-w-md mx-auto transform transition-all duration-300 hover:scale-105">
+      <div className="absolute -top-3 -left-3">
+        <div className="bg-brand-blue rounded-full p-2">
+          <MessageSquare size={18} className="text-white" />
+        </div>
+      </div>
       <div className="min-h-[120px] flex flex-col justify-between">
-        <p className="text-sm text-muted-foreground italic mb-4">
+        <p className="text-sm text-muted-foreground italic mb-4 font-sans">
           "{testimonials[currentIndex].quote}"
         </p>
         <div className="flex items-center gap-3">
-          <Avatar className="h-8 w-8 bg-brand-blue text-white">
+          <Avatar className="h-8 w-8 bg-brand-teal text-white">
             <AvatarFallback>
               {testimonials[currentIndex].initials || testimonials[currentIndex].author.charAt(0)}
             </AvatarFallback>
           </Avatar>
           <div>
-            <p className="font-medium text-sm">— {testimonials[currentIndex].author}</p>
-            <p className="text-xs text-muted-foreground">{testimonials[currentIndex].role}</p>
+            <p className="font-medium text-sm font-heading">— {testimonials[currentIndex].author}</p>
+            <p className="text-xs text-muted-foreground font-sans">{testimonials[currentIndex].role}</p>
           </div>
         </div>
       </div>

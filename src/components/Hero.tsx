@@ -1,5 +1,5 @@
 
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Sparkles, Rocket } from "lucide-react";
 import Testimonial from "./Testimonial";
 
 const Hero = () => {
@@ -25,7 +25,7 @@ const Hero = () => {
     <section className="pt-24 pb-20 md:pt-32 md:pb-28">
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex flex-col items-center text-center">
-          <div className="mb-8 w-32 h-32">
+          <div className="mb-8 w-32 h-32 animate-bounce">
             <img 
               src="/lovable-uploads/f60fa699-511b-4f4f-9bbe-344397f2a3cf.png" 
               alt="The Hustling Engineer Logo" 
@@ -33,14 +33,16 @@ const Hero = () => {
             />
           </div>
           
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-heading text-brand-dark mb-6 max-w-5xl leading-tight">
+          <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-brand-dark mb-6 max-w-5xl leading-tight">
             Level Up Your Tech Career With 
-            <span className="text-brand-blue"> Proven Strategies</span>
+            <span className="fun-title"> Proven Strategies </span>
+            <Sparkles className="inline-block ml-2 text-yellow-400 animate-pulse" />
           </h1>
           
-          <p className="text-xl text-muted-foreground mb-8 max-w-2xl">
+          <p className="text-xl font-sans text-muted-foreground mb-8 max-w-2xl">
             Join thousands of engineers who receive weekly insights on career growth, 
-            technical leadership, and proven frameworks to excel in the tech industry.
+            technical leadership, and proven frameworks to excel in the tech industry. 
+            <span className="text-brand-blue font-semibold">✨ It's time to shine! ✨</span>
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 mb-16">
@@ -48,15 +50,15 @@ const Hero = () => {
               href="https://thehustlingengineer.substack.com" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="btn-primary"
+              className="btn-primary font-heading"
             >
               Subscribe to Newsletter <ArrowRight size={18} className="ml-2" />
             </a>
             <a 
               href="#mentorship" 
-              className="btn-outline"
+              className="btn-outline font-heading group"
             >
-              Explore Mentorship
+              Explore Mentorship <Rocket size={18} className="ml-2 group-hover:animate-bounce" />
             </a>
           </div>
           

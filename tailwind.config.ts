@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -91,17 +90,28 @@ export default {
 				'fade-in-right': {
 					'0%': { opacity: '0', transform: 'translateX(20px)' },
 					'100%': { opacity: '1', transform: 'translateX(0)' }
+				},
+				'bounce': {
+					'0%, 100%': { transform: 'translateY(0)' },
+					'50%': { transform: 'translateY(-10px)' }
+				},
+				'wiggle': {
+					'0%, 100%': { transform: 'rotate(-3deg)' },
+					'50%': { transform: 'rotate(3deg)' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
 				'fade-in': 'fade-in 0.7s ease-out forwards',
-				'fade-in-right': 'fade-in-right 0.7s ease-out forwards'
+				'fade-in-right': 'fade-in-right 0.7s ease-out forwards',
+				'bounce': 'bounce 2s infinite',
+				'wiggle': 'wiggle 1s ease-in-out infinite'
 			},
 			fontFamily: {
-				sans: ['Inter', 'sans-serif'],
-				heading: ['Montserrat', 'sans-serif']
+				sans: ['"Quicksand"', 'Inter', 'sans-serif'],
+				heading: ['"Poppins"', 'Montserrat', 'sans-serif'],
+				fun: ['"Fredoka One"', 'cursive']
 			}
 		}
 	},

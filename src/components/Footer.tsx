@@ -20,9 +20,9 @@ const Footer = () => {
               className="h-12 w-12 mr-3"
             />
             <div>
-              <h2 className="text-2xl font-bold font-heading">The Hustling Engineer</h2>
-              <p className="text-gray-400 mt-2">
-                Helping engineers excel in their tech careers.
+              <h2 className="text-2xl font-bold font-fun">The Hustling Engineer</h2>
+              <p className="text-gray-400 mt-2 font-sans">
+                Helping engineers excel in their tech careers. ✨
               </p>
             </div>
           </div>
@@ -30,13 +30,13 @@ const Footer = () => {
           <div className="flex flex-col items-center md:items-end">
             <button 
               onClick={scrollToTop}
-              className="bg-gray-800 hover:bg-gray-700 text-white p-3 rounded-full mb-4 transition-all duration-200"
+              className="bg-gray-800 hover:bg-gray-700 text-white p-3 rounded-full mb-4 transition-all duration-200 hover:animate-bounce"
               aria-label="Scroll to top"
             >
               <ArrowUp size={20} />
             </button>
-            <p className="text-gray-400 text-sm">
-              © {new Date().getFullYear()} The Hustling Engineer. All rights reserved.
+            <p className="text-gray-400 text-sm font-sans">
+              © {new Date().getFullYear()} The Hustling Engineer. All rights reserved. 🚀
             </p>
           </div>
         </div>
