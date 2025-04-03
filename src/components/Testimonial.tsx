@@ -15,8 +15,11 @@ interface TestimonialProps {
 
 const Testimonial = ({ testimonials, intervalTime = 5000 }: TestimonialProps) => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [isClient, setIsClient] = useState(false);
 
   useEffect(() => {
+    setIsClient(true);
+    
     if (testimonials.length <= 1) return;
     
     const interval = setInterval(() => {
@@ -31,6 +34,21 @@ const Testimonial = ({ testimonials, intervalTime = 5000 }: TestimonialProps) =>
   };
 
   if (!testimonials.length) return null;
+  
+  // Since we're doing the animation client-side, make sure we don't render
+  // in SSR and cause hydration issues
+  if (!isClient) {
+    return (
+      <div className="relative bg-muted rounded-lg p-5 max-w-md mx-auto">
+        <div className="absolute -top-3 -left-3">
+          <div className="bg-brand-blue rounded-full p-2">
+            <MessageSquare size={18} className="text-white" />
+          </div>
+        </div>
+        <div className="min-h-[120px]">Loading testimonials...</div>
+      </div>
+    );
+  }
 
   return (
     <div className="relative bg-muted rounded-lg p-5 max-w-md mx-auto transform transition-all duration-300 hover:scale-105">

@@ -1,70 +1,86 @@
 
-import { Users, Calendar, FileText, ArrowRight, Star } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { ExternalLink, Calendar, MessageCircle, Video } from "lucide-react";
 
 const Mentorship = () => {
-  const mentorshipFeatures = [
+  const benefits = [
     {
-      icon: <Users className="w-10 h-10 text-brand-blue" />,
-      title: "1:1 Coaching",
-      description: "Personalized guidance tailored to your career goals and challenges.",
-      emoji: "👥"
+      icon: <Calendar className="h-6 w-6 text-brand-teal" />,
+      title: "1:1 Coaching Sessions",
+      description: "Schedule personal mentorship calls tailored to your specific career goals and challenges."
     },
     {
-      icon: <Calendar className="w-10 h-10 text-brand-blue" />,
-      title: "Flexible Sessions",
-      description: "Book sessions that fit your schedule, from quick calls to deep dives.",
-      emoji: "📅"
+      icon: <MessageCircle className="h-6 w-6 text-brand-teal" />,
+      title: "Unlimited Text Advice",
+      description: "Get ongoing guidance through text-based communication for quick questions and feedback."
     },
     {
-      icon: <FileText className="w-10 h-10 text-brand-blue" />,
-      title: "Resume Reviews",
-      description: "Get expert feedback on your resume to stand out to top employers.",
-      emoji: "📝"
+      icon: <Video className="h-6 w-6 text-brand-teal" />,
+      title: "Resume & Portfolio Review",
+      description: "Receive detailed feedback on your resume, portfolio, and professional profiles."
     }
   ];
 
   return (
-    <section id="mentorship" className="py-20 bg-white">
+    <section id="mentorship" className="py-16 md:py-24 bg-gradient-to-b from-brand-light to-white">
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center mb-12">
-          <h2 className="section-title font-heading">
-            Accelerate Your Growth with Mentorship 
-            <span className="fun-highlight ml-2">⚡</span>
+          <h2 className="section-title">
+            <span className="fun-title">Personalized Mentorship</span> for Engineers
           </h2>
-          <p className="section-subtitle font-sans">
-            Get personalized guidance to navigate your tech career challenges and opportunities.
+          <p className="section-subtitle">
+            Skip years of trial and error with 1:1 guidance from someone who's been there. <span className="emoji-bullet">🧠</span>
           </p>
         </div>
-        
-        <div className="grid md:grid-cols-3 gap-8 mb-12">
-          {mentorshipFeatures.map((feature, index) => (
-            <div key={index} className="feature-card flex flex-col items-center text-center group hover:scale-105 transition-all duration-300">
-              <div className="mb-2 text-4xl group-hover:animate-bounce">{feature.emoji}</div>
-              <div className="mb-2">{feature.icon}</div>
-              <h3 className="text-xl font-bold mb-2 text-brand-dark font-heading">{feature.title}</h3>
-              <p className="text-muted-foreground font-sans">{feature.description}</p>
+
+        <div className="grid md:grid-cols-2 gap-12 items-center">
+          <div className="order-2 md:order-1">
+            <h3 className="text-2xl font-bold font-heading mb-6">How can mentorship help you?</h3>
+            <div className="space-y-6">
+              {benefits.map((benefit, index) => (
+                <div key={index} className="feature-card">
+                  <div className="flex items-start">
+                    <div className="mr-4 p-2 bg-muted rounded-md">
+                      {benefit.icon}
+                    </div>
+                    <div>
+                      <h4 className="font-heading font-bold text-lg mb-2">{benefit.title}</h4>
+                      <p className="text-muted-foreground font-sans">{benefit.description}</p>
+                    </div>
+                  </div>
+                </div>
+              ))}
             </div>
-          ))}
-        </div>
-        
-        <div className="bg-brand-light rounded-lg p-8 max-w-3xl mx-auto">
-          <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
-            <div>
-              <h3 className="text-2xl font-bold text-brand-dark mb-2 font-heading flex items-center">
-                Ready to level up? <Star className="ml-2 text-yellow-500 animate-pulse" />
-              </h3>
-              <p className="text-muted-foreground font-sans">
-                Book a mentorship session to discuss your career goals and challenges.
-              </p>
+            
+            <div className="mt-8 text-center md:text-left">
+              <a 
+                href="https://topmate.io/hemant" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="btn-secondary group"
+              >
+                Book a Session <ExternalLink size={18} className="ml-2 group-hover:rotate-12 transition-transform" />
+              </a>
             </div>
-            <a 
-              href="https://topmate.io/hemant" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="btn-primary whitespace-nowrap font-heading"
-            >
-              Book a Session <ArrowRight size={18} className="ml-2" />
-            </a>
+          </div>
+          
+          <div className="order-1 md:order-2">
+            <div className="bg-white p-8 rounded-lg shadow-lg border border-gray-100 relative">
+              <div className="absolute -top-3 -left-3 bg-brand-blue text-white text-sm font-bold py-1 px-3 rounded-full shadow-md animate-bounce">
+                Limited Slots!
+              </div>
+              <h3 className="text-2xl font-bold font-heading mb-4">What mentees are saying</h3>
+              <div className="space-y-6">
+                <div className="border-l-4 border-brand-teal pl-4 italic">
+                  <p className="mb-2 text-muted-foreground font-sans">"Hemant helped me prepare for tech interviews and I landed a job at my dream company. His guidance was practical and specific to my goals."</p>
+                  <p className="font-bold font-sans">— Ravi K., Software Engineer</p>
+                </div>
+                <div className="border-l-4 border-brand-blue pl-4 italic">
+                  <p className="mb-2 text-muted-foreground font-sans">"The career roadmap we developed together has been my north star. Whenever I feel lost, I go back to it for direction."</p>
+                  <p className="font-bold font-sans">— Ananya S., Frontend Developer</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

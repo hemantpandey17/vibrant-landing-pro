@@ -1,68 +1,70 @@
 
-import { ArrowRight, Sparkles, Rocket } from "lucide-react";
-import Testimonial from "./Testimonial";
+import { Button } from "@/components/ui/button";
+import Testimonial from "@/components/Testimonial";
+import { ArrowRight } from "lucide-react";
 
 const Hero = () => {
   const testimonials = [
     {
-      quote: "Hemant's insights have been game-changing for my career development. His newsletter is a must-read for any ambitious engineer.",
-      author: "Engineering Manager",
-      role: "at FAANG"
+      quote: "The Hustling Engineer newsletter has been a game-changer for my tech career! Practical advice that actually works.",
+      author: "Alex Johnson",
+      role: "Senior Developer",
+      initials: "AJ"
     },
     {
-      quote: "The frameworks shared in this newsletter helped me land my dream role. Incredibly practical and actionable content.",
-      author: "Senior Developer",
-      role: "at Startup"
+      quote: "As a junior developer, this newsletter has given me the exact roadmap I needed to grow. Highly recommend!",
+      author: "Priya Singh",
+      role: "Junior Developer",
+      initials: "PS"
     },
     {
-      quote: "I've doubled my salary in 18 months using the negotiation tactics I learned from The Hustling Engineer.",
-      author: "Tech Lead",
-      role: "at Fortune 500"
+      quote: "Finally found career advice that's specific to engineers! Love the actionable tips in every issue.",
+      author: "Marco Chen",
+      role: "Tech Lead",
+      initials: "MC"
     }
   ];
 
   return (
-    <section className="pt-24 pb-20 md:pt-32 md:pb-28">
+    <section className="pt-32 pb-16 md:pb-24 bg-gradient-to-b from-white to-brand-light">
       <div className="container mx-auto px-4 md:px-6">
-        <div className="flex flex-col items-center text-center">
-          <div className="mb-8 w-32 h-32 animate-bounce">
-            <img 
-              src="/lovable-uploads/f60fa699-511b-4f4f-9bbe-344397f2a3cf.png" 
-              alt="The Hustling Engineer Logo" 
-              className="w-full h-full object-contain"
-            />
+        <div className="flex flex-col lg:flex-row items-center gap-12">
+          <div className="lg:w-7/12 text-center lg:text-left">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-heading mb-6 leading-tight">
+              Level Up Your <span className="fun-title">Engineering Career</span> With Weekly Insights ✨
+            </h1>
+            <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto lg:mx-0">
+              Join <span className="fun-highlight">5,000+</span> engineers who receive practical career advice, productivity hacks, and industry insights every Sunday. <span className="emoji-bullet">🚀</span> No fluff, just value!
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+              <a 
+                href="https://thehustlingengineer.substack.com" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="btn-primary"
+              >
+                Subscribe Now <ArrowRight size={18} className="ml-2" />
+              </a>
+              <a 
+                href="#newsletter" 
+                className="btn-outline"
+              >
+                Learn More
+              </a>
+            </div>
           </div>
-          
-          <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-brand-dark mb-6 max-w-5xl leading-tight">
-            Level Up Your Tech Career With 
-            <span className="fun-title"> Proven Strategies </span>
-            <Sparkles className="inline-block ml-2 text-yellow-400 animate-pulse" />
-          </h1>
-          
-          <p className="text-xl font-sans text-muted-foreground mb-8 max-w-2xl">
-            Join thousands of engineers who receive weekly insights on career growth, 
-            technical leadership, and proven frameworks to excel in the tech industry. 
-            <span className="text-brand-blue font-semibold">✨ It's time to shine! ✨</span>
-          </p>
-          
-          <div className="flex flex-col sm:flex-row gap-4 mb-16">
-            <a 
-              href="https://thehustlingengineer.substack.com" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="btn-primary font-heading"
-            >
-              Subscribe to Newsletter <ArrowRight size={18} className="ml-2" />
-            </a>
-            <a 
-              href="#mentorship" 
-              className="btn-outline font-heading group"
-            >
-              Explore Mentorship <Rocket size={18} className="ml-2 group-hover:animate-bounce" />
-            </a>
+          <div className="lg:w-5/12 rounded-lg overflow-hidden">
+            <div className="relative">
+              <img 
+                src="/lovable-uploads/f60fa699-511b-4f4f-9bbe-344397f2a3cf.png" 
+                alt="The Hustling Engineer Newsletter" 
+                className="w-full h-auto rounded-lg shadow-xl"
+              />
+              <div className="absolute -bottom-6 -right-6 w-full max-w-sm">
+                <Testimonial testimonials={testimonials} />
+              </div>
+            </div>
           </div>
-          
-          <Testimonial testimonials={testimonials} />
         </div>
       </div>
     </section>

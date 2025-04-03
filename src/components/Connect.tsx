@@ -1,78 +1,65 @@
 
-import { Twitter, Linkedin, Youtube, Mail, Link2, ArrowRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Link2, Twitter, Linkedin, Instagram, ExternalLink } from "lucide-react";
 
 const Connect = () => {
-  const socialLinks = [
-    {
-      icon: <Twitter className="w-5 h-5" />,
-      name: "Twitter",
-      handle: "@thehustlingengineer",
-      emoji: "🐦"
-    },
-    {
-      icon: <Linkedin className="w-5 h-5" />,
-      name: "LinkedIn",
-      handle: "hemantpandey",
-      emoji: "👔"
-    },
-    {
-      icon: <Youtube className="w-5 h-5" />,
-      name: "YouTube",
-      handle: "TheHustlingEngineer",
-      emoji: "📺"
-    },
-    {
-      icon: <Mail className="w-5 h-5" />,
-      name: "Email",
-      handle: "hello@thehustlingengineer.com",
-      emoji: "✉️"
-    }
-  ];
-
   return (
-    <section id="connect" className="py-20 bg-white">
+    <section className="py-16 md:py-24 bg-gradient-to-b from-white to-brand-light">
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center mb-12">
-          <h2 className="section-title font-heading">
-            Let's Connect 
-            <span className="fun-highlight ml-2">🤝</span>
+          <h2 className="section-title">
+            Let's <span className="fun-title">Connect</span> & Grow Together
           </h2>
-          <p className="section-subtitle font-sans">
-            Follow me on social media for daily tips, insights, and updates.
+          <p className="section-subtitle">
+            Follow me on social media for daily tips, updates, and inspiration. <span className="emoji-bullet">🌟</span>
           </p>
         </div>
         
-        <div className="max-w-4xl mx-auto">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
-            {socialLinks.map((link, index) => (
-              <div key={index} className="feature-card flex flex-col items-center text-center group hover:scale-105 transition-all duration-300">
-                <div className="text-3xl mb-2 group-hover:animate-bounce">{link.emoji}</div>
-                <div className="bg-brand-light p-3 rounded-full mb-4">
-                  {link.icon}
-                </div>
-                <h3 className="font-bold text-brand-dark font-heading">{link.name}</h3>
-                <p className="text-sm text-muted-foreground font-sans">{link.handle}</p>
-              </div>
-            ))}
-          </div>
-          
-          <div className="bg-brand-dark text-white rounded-lg p-8 text-center">
-            <div className="flex flex-col items-center">
-              <Link2 className="w-10 h-10 mb-4" />
-              <h3 className="text-2xl font-bold mb-2 font-heading">Find All My Links in One Place ✨</h3>
-              <p className="text-gray-300 mb-6 max-w-xl mx-auto font-sans">
-                Access all my social profiles, resources, latest blog posts, and more from a single hub.
-              </p>
-              <a 
-                href="https://linktr.ee/hemant.pandey" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="bg-white text-brand-dark hover:bg-gray-100 font-medium py-3 px-6 rounded-md transition-all duration-200 inline-flex items-center font-heading"
-              >
-                Visit My Linktree <ArrowRight size={18} className="ml-2" />
-              </a>
-            </div>
-          </div>
+        <div className="flex flex-wrap justify-center gap-6 mb-12">
+          <a 
+            href="https://twitter.com" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="bg-white hover:bg-gray-50 text-[#1DA1F2] p-4 rounded-full shadow-md transition-transform hover:scale-110"
+            aria-label="Twitter"
+          >
+            <Twitter size={28} />
+          </a>
+          <a 
+            href="https://linkedin.com" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="bg-white hover:bg-gray-50 text-[#0077B5] p-4 rounded-full shadow-md transition-transform hover:scale-110"
+            aria-label="LinkedIn"
+          >
+            <Linkedin size={28} />
+          </a>
+          <a 
+            href="https://instagram.com" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="bg-white hover:bg-gray-50 text-[#E4405F] p-4 rounded-full shadow-md transition-transform hover:scale-110"
+            aria-label="Instagram"
+          >
+            <Instagram size={28} />
+          </a>
+        </div>
+        
+        <div className="max-w-2xl mx-auto bg-white p-8 rounded-lg shadow-lg text-center">
+          <h3 className="text-2xl font-bold font-heading mb-4">Find All My Links in One Place</h3>
+          <p className="text-muted-foreground mb-6 font-sans">
+            Access all my social profiles, websites, and content platforms from a single hub. <span className="emoji-bullet">🔗</span>
+          </p>
+          <a 
+            href="https://linktr.ee/hemant.pandey" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="btn-primary inline-flex items-center"
+          >
+            <Link2 size={18} className="mr-2" />
+            Visit My Linktree
+            <ExternalLink size={18} className="ml-2" />
+          </a>
         </div>
       </div>
     </section>
