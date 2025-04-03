@@ -1,5 +1,5 @@
 
-// Use require-like syntax instead of ES imports for compatibility
+// Use the globally loaded React and ReactDOM
 const React = window.React;
 const ReactDOM = window.ReactDOM;
 const App = window.App;
