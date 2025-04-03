@@ -25,4 +25,11 @@ const App = () => (
   </QueryClientProvider>
 );
 
+export type AppComponent = typeof App;
+
+// Make App available globally for the script-tag based approach
+if (typeof window !== 'undefined') {
+  window.App = App;
+}
+
 export default App;
