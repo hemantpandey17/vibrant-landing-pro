@@ -12,6 +12,13 @@ type ToasterToast = ToastProps & {
   action?: ToastActionElement
 }
 
+// Add the ToastAction type definition that was missing
+type ToastAction = {
+  altText?: string
+  onClick: () => void
+  label: string
+}
+
 const actionTypes = {
   ADD_TOAST: "ADD_TOAST",
   UPDATE_TOAST: "UPDATE_TOAST",
