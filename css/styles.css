@@ -484,7 +484,7 @@ section {
 }
 
 .quote:before {
-  content: """;
+  content: "\201C"; /* Fixed: Replaced """ with proper Unicode escape for opening quotation mark */
   font-size: 4rem;
   position: absolute;
   top: -2rem;
