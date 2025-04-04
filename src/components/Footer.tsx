@@ -15,7 +15,7 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-6 md:mb-0 flex items-center">
             <img 
-              src="/lovable-uploads/f60fa699-511b-4f4f-9bbe-344397f2a3cf.png" 
+              src="/lovable-uploads/30fa9aac-b02c-4417-b1f8-29cb4ea660ef.png" 
               alt="The Hustling Engineer Logo" 
               className="h-12 w-12 mr-3"
             />

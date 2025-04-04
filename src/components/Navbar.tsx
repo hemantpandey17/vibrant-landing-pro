@@ -24,7 +24,7 @@ const Navbar = () => {
         <div className="flex justify-between items-center">
           <div className="flex items-center">
             <img 
-              src="/lovable-uploads/f60fa699-511b-4f4f-9bbe-344397f2a3cf.png" 
+              src="/lovable-uploads/30fa9aac-b02c-4417-b1f8-29cb4ea660ef.png" 
               alt="The Hustling Engineer Logo" 
               className="h-10 w-10 mr-3"
             />
