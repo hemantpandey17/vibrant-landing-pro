@@ -55,11 +55,6 @@ const Hero = () => {
           </div>
           <div className="lg:w-5/12 rounded-lg overflow-hidden">
             <div className="relative">
-              <img 
-                src="/lovable-uploads/30fa9aac-b02c-4417-b1f8-29cb4ea660ef.png" 
-                alt="The Hustling Engineer Newsletter" 
-                className="w-full h-auto rounded-lg shadow-xl"
-              />
               <div className="absolute -bottom-6 -right-6 w-full max-w-sm">
                 <Testimonial testimonials={testimonials} />
               </div>
