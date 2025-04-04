@@ -20,26 +20,301 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Poppins:wght@400;500;600;700&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- Load React and ReactDOM from CDN -->
-    <script src="https://unpkg.com/react@18.3.1/umd/react.production.min.js"></script>
-    <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js"></script>
-    
-    <!-- Load inline script to handle initial setup -->
-    <script>
-      window.onload = function() {
-        // Create a script element to load the main application code
-        const script = document.createElement('script');
-        script.src = '/src/main.js'; // Load the transpiled JS file
-        script.type = 'text/javascript';
-        document.body.appendChild(script);
-      }
-    </script>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
   </head>
 
   <body>
-    <div id="root"></div>
-    <!-- IMPORTANT: DO NOT REMOVE THIS SCRIPT TAG OR THIS VERY COMMENT! -->
-    <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
+    <header class="header">
+      <div class="container">
+        <nav class="navbar">
+          <div class="logo">
+            <a href="/">
+              <img src="images/logo.png" alt="The Hustling Engineer" />
+            </a>
+          </div>
+          <div class="nav-links" id="navLinks">
+            <ul>
+              <li><a href="#about">About</a></li>
+              <li><a href="#newsletter">Newsletter</a></li>
+              <li><a href="#mentorship">Mentorship</a></li>
+              <li><a href="#products">Products</a></li>
+              <li><a href="#connect" class="btn-primary">Connect</a></li>
+            </ul>
+          </div>
+          <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <section class="hero" id="hero">
+      <div class="container">
+        <div class="hero-content">
+          <h1>Accelerate Your <span class="fun-highlight">Tech Career</span> Growth</h1>
+          <p>Join thousands of engineers receiving weekly insights, proven strategies, and practical resources to level up your tech career.</p>
+          <div class="hero-cta">
+            <a href="#newsletter" class="btn-primary">Join Newsletter</a>
+            <a href="#mentorship" class="btn-outline">Get Mentorship</a>
+          </div>
+        </div>
+        <div class="hero-image">
+          <img src="images/hero-image.jpg" alt="Engineer working on laptop" />
+        </div>
+      </div>
+    </section>
+
+    <section class="newsletter" id="newsletter">
+      <div class="container">
+        <h2 class="section-title">Weekly <span class="fun-highlight">Engineer's</span> Insights</h2>
+        <p class="section-subtitle">Get actionable strategies, career hacks, and tech resources delivered to your inbox.</p>
+        
+        <div class="newsletter-form">
+          <form id="subscribe-form">
+            <div class="form-group">
+              <input type="email" id="email" placeholder="Your email address" required>
+              <button type="submit" class="btn-primary">Subscribe</button>
+            </div>
+            <div class="form-message" id="form-message"></div>
+          </form>
+          
+          <div class="newsletter-benefits">
+            <div class="benefit">
+              <span class="emoji-bullet">⚡</span>
+              <p>Weekly tech insights from industry veterans</p>
+            </div>
+            <div class="benefit">
+              <span class="emoji-bullet">🚀</span>
+              <p>Practical career growth strategies</p>
+            </div>
+            <div class="benefit">
+              <span class="emoji-bullet">🔧</span>
+              <p>Tools and resources curated for engineers</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="mentorship" id="mentorship">
+      <div class="container">
+        <h2 class="section-title">1:1 <span class="fun-highlight">Career</span> Mentorship</h2>
+        <p class="section-subtitle">Personalized guidance to help you overcome challenges and reach your career goals.</p>
+        
+        <div class="mentorship-options">
+          <div class="mentorship-card">
+            <h3>Career Strategy Session</h3>
+            <p class="price">$149</p>
+            <ul>
+              <li>60-minute personalized session</li>
+              <li>Career path planning</li>
+              <li>Skill gap analysis</li>
+              <li>Resume and portfolio review</li>
+            </ul>
+            <a href="mailto:contact@hustlingengineer.com?subject=Career Strategy Session" class="btn-primary">Book Now</a>
+          </div>
+          
+          <div class="mentorship-card featured">
+            <div class="featured-tag">Most Popular</div>
+            <h3>Monthly Mentorship</h3>
+            <p class="price">$499</p>
+            <ul>
+              <li>4 weekly 45-minute sessions</li>
+              <li>Ongoing project guidance</li>
+              <li>Custom growth roadmap</li>
+              <li>Accountable progress tracking</li>
+              <li>Email support between sessions</li>
+            </ul>
+            <a href="mailto:contact@hustlingengineer.com?subject=Monthly Mentorship" class="btn-secondary">Book Now</a>
+          </div>
+          
+          <div class="mentorship-card">
+            <h3>Interview Preparation</h3>
+            <p class="price">$249</p>
+            <ul>
+              <li>90-minute mock interview</li>
+              <li>Personalized feedback</li>
+              <li>Technical question prep</li>
+              <li>Behavioral question strategies</li>
+              <li>Follow-up session</li>
+            </ul>
+            <a href="mailto:contact@hustlingengineer.com?subject=Interview Preparation" class="btn-primary">Book Now</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="products" id="products">
+      <div class="container">
+        <h2 class="section-title">Digital <span class="fun-highlight">Resources</span></h2>
+        <p class="section-subtitle">Practical guides and templates to accelerate your engineering career.</p>
+        
+        <div class="products-grid">
+          <div class="product-card">
+            <div class="product-image">
+              <img src="images/product-1.jpg" alt="Engineering Resume Templates" />
+            </div>
+            <h3>Engineering Resume Templates</h3>
+            <p>ATS-optimized resume templates specifically designed for software engineers and tech professionals.</p>
+            <p class="price">$29</p>
+            <a href="#" class="btn-primary">Learn More</a>
+          </div>
+          
+          <div class="product-card">
+            <div class="product-image">
+              <img src="images/product-2.jpg" alt="System Design Interview Guide" />
+            </div>
+            <h3>System Design Interview Guide</h3>
+            <p>Comprehensive guide with real-world examples and frameworks for acing system design interviews.</p>
+            <p class="price">$49</p>
+            <a href="#" class="btn-primary">Learn More</a>
+          </div>
+          
+          <div class="product-card">
+            <div class="product-image">
+              <img src="images/product-3.jpg" alt="Tech Lead Playbook" />
+            </div>
+            <h3>Tech Lead Playbook</h3>
+            <p>Step-by-step playbook for engineers transitioning to tech lead roles with actionable templates.</p>
+            <p class="price">$79</p>
+            <a href="#" class="btn-primary">Learn More</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="testimonials">
+      <div class="container">
+        <h2 class="section-title">What <span class="fun-highlight">Engineers</span> Say</h2>
+        
+        <div class="testimonial-slider" id="testimonialSlider">
+          <div class="testimonial-slide active">
+            <p class="quote">"The mentorship program helped me land a senior role at a FAANG company. The structured approach and actionable feedback made all the difference."</p>
+            <div class="author">
+              <img src="images/testimonial-1.jpg" alt="Priya S." />
+              <div>
+                <h4>Priya S.</h4>
+                <p>Senior Software Engineer, Google</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="testimonial-slide">
+            <p class="quote">"The weekly newsletter has become my go-to resource for staying updated with industry trends and career growth strategies."</p>
+            <div class="author">
+              <img src="images/testimonial-2.jpg" alt="Mark T." />
+              <div>
+                <h4>Mark T.</h4>
+                <p>Full Stack Developer, Spotify</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="testimonial-slide">
+            <p class="quote">"The Tech Lead Playbook transformed how I approach leadership. It's filled with practical strategies that I apply daily."</p>
+            <div class="author">
+              <img src="images/testimonial-3.jpg" alt="Sarah J." />
+              <div>
+                <h4>Sarah J.</h4>
+                <p>Engineering Manager, Microsoft</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="slider-controls">
+          <button class="prev" id="testimonialPrev">←</button>
+          <div class="dots">
+            <span class="dot active" data-index="0"></span>
+            <span class="dot" data-index="1"></span>
+            <span class="dot" data-index="2"></span>
+          </div>
+          <button class="next" id="testimonialNext">→</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="connect" id="connect">
+      <div class="container">
+        <h2 class="section-title">Let's <span class="fun-highlight">Connect</span></h2>
+        <p class="section-subtitle">Have questions or want to collaborate? Reach out!</p>
+        
+        <div class="connect-form">
+          <form id="contact-form">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" placeholder="Your name" required>
+              </div>
+              <div class="form-group">
+                <label for="contact-email">Email</label>
+                <input type="email" id="contact-email" placeholder="Your email" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" placeholder="What's this about?">
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" placeholder="Your message" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="btn-primary">Send Message</button>
+            <div class="form-message" id="contact-form-message"></div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-logo">
+            <img src="images/logo.png" alt="The Hustling Engineer" />
+            <p>Accelerating engineers' careers through actionable insights and mentorship.</p>
+          </div>
+          
+          <div class="footer-links">
+            <div class="footer-column">
+              <h4>Quick Links</h4>
+              <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#newsletter">Newsletter</a></li>
+                <li><a href="#mentorship">Mentorship</a></li>
+                <li><a href="#products">Resources</a></li>
+              </ul>
+            </div>
+            
+            <div class="footer-column">
+              <h4>Connect</h4>
+              <ul>
+                <li><a href="mailto:contact@hustlingengineer.com">Email</a></li>
+                <li><a href="https://twitter.com/hustlingenginr" target="_blank">Twitter</a></li>
+                <li><a href="https://linkedin.com/in/hustlingengineer" target="_blank">LinkedIn</a></li>
+                <li><a href="https://github.com/hustlingengineer" target="_blank">GitHub</a></li>
+              </ul>
+            </div>
+            
+            <div class="footer-column">
+              <h4>Legal</h4>
+              <ul>
+                <li><a href="/privacy.html">Privacy Policy</a></li>
+                <li><a href="/terms.html">Terms of Service</a></li>
+                <li><a href="/cookies.html">Cookie Policy</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+        <div class="footer-bottom">
+          <p>&copy; 2025 The Hustling Engineer. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
   </body>
 </html>
