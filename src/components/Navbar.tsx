@@ -24,7 +24,7 @@ const Navbar = () => {
         <div className="flex justify-between items-center">
           <div className="flex items-center">
             <img 
-              src="/lovable-uploads/f60fa699-511b-4f4f-9bbe-344397f2a3cf.png" 
+              src="/lovable-uploads/30fa9aac-b02c-4417-b1f8-29cb4ea660ef.png" 
               alt="The Hustling Engineer Logo" 
               className="h-10 w-10 mr-3"
             />
@@ -45,10 +45,12 @@ const Navbar = () => {
               Products
             </a>
             <a 
-              href="#connect"
-              className="bg-brand-blue hover:bg-brand-dark text-white font-medium py-2 px-5 rounded-md transition-all duration-200 inline-flex items-center justify-center"
+              href="https://thehustlingengineer.substack.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-primary"
             >
-              Connect
+              Subscribe
             </a>
           </div>
           
@@ -86,11 +88,13 @@ const Navbar = () => {
                 Products
               </a>
               <a 
-                href="#connect"
-                className="bg-brand-blue hover:bg-brand-dark text-white font-medium py-2 px-5 rounded-md transition-all duration-200 inline-flex items-center justify-center"
+                href="https://thehustlingengineer.substack.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-primary"
                 onClick={() => setIsMenuOpen(false)}
               >
-                Connect
+                Subscribe
               </a>
             </div>
           </div>
