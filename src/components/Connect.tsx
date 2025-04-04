@@ -17,7 +17,7 @@ const Connect = () => {
         
         <div className="flex flex-wrap justify-center gap-6 mb-12">
           <a 
-            href="https://twitter.com" 
+            href="https://x.com/hemant_pandey17" 
             target="_blank" 
             rel="noopener noreferrer"
             className="bg-white hover:bg-gray-50 text-[#1DA1F2] p-4 rounded-full shadow-md transition-transform hover:scale-110"
@@ -26,7 +26,7 @@ const Connect = () => {
             <Twitter size={28} />
           </a>
           <a 
-            href="https://linkedin.com" 
+            href="https://www.linkedin.com/in/hemant-pandey/" 
             target="_blank" 
             rel="noopener noreferrer"
             className="bg-white hover:bg-gray-50 text-[#0077B5] p-4 rounded-full shadow-md transition-transform hover:scale-110"
@@ -35,7 +35,7 @@ const Connect = () => {
             <Linkedin size={28} />
           </a>
           <a 
-            href="https://instagram.com" 
+            href="https://instagram.com/hemant_careerbytes" 
             target="_blank" 
             rel="noopener noreferrer"
             className="bg-white hover:bg-gray-50 text-[#E4405F] p-4 rounded-full shadow-md transition-transform hover:scale-110"
