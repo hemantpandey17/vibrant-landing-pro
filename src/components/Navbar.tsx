@@ -39,7 +39,7 @@ const Navbar = () => {
             <a href="#newsletter" className="text-gray-700 hover:text-brand-blue transition-colors">
               Newsletter
             </a>
-            <Link to="/cohort" className="text-gray-700 hover:text-brand-blue transition-colors">
+            <Link to="/cohort" className="text-gray-700 hover:text-brand-blue transition-colors font-medium">
               Cohort
             </Link>
             <a href="#mentorship" className="text-gray-700 hover:text-brand-blue transition-colors">
@@ -79,7 +79,7 @@ const Navbar = () => {
               </a>
               <Link 
                 to="/cohort" 
-                className="text-gray-700 hover:text-brand-blue py-2"
+                className="text-gray-700 hover:text-brand-blue py-2 font-medium"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Cohort
