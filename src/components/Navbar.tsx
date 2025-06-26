@@ -2,6 +2,7 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -22,7 +23,7 @@ const Navbar = () => {
     }`}>
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex justify-between items-center">
-          <div className="flex items-center">
+          <Link to="/" className="flex items-center">
             <img 
               src="/lovable-uploads/f60fa699-511b-4f4f-9bbe-344397f2a3cf.png" 
               alt="The Hustling Engineer Logo" 
@@ -31,13 +32,16 @@ const Navbar = () => {
             <span className="font-heading font-bold text-2xl text-brand-dark">
               The Hustling Engineer
             </span>
-          </div>
+          </Link>
           
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             <a href="#newsletter" className="text-gray-700 hover:text-brand-blue transition-colors">
               Newsletter
             </a>
+            <Link to="/cohort" className="text-gray-700 hover:text-brand-blue transition-colors">
+              Cohort
+            </Link>
             <a href="#mentorship" className="text-gray-700 hover:text-brand-blue transition-colors">
               Mentorship
             </a>
@@ -73,6 +77,13 @@ const Navbar = () => {
               >
                 Newsletter
               </a>
+              <Link 
+                to="/cohort" 
+                className="text-gray-700 hover:text-brand-blue py-2"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Cohort
+              </Link>
               <a 
                 href="#mentorship" 
                 className="text-gray-700 hover:text-brand-blue py-2"
